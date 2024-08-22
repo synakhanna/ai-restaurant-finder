@@ -68,7 +68,7 @@ export default function Body() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             InputProps={{
-              style: { backgroundColor: '#b18569', color: '#281705' },
+              style: { backgroundColor: '#b18569', color: '#281705' , fontFamily: 'JejuMyeongjo'},
             }}
             InputLabelProps={{
               style: { color: '#281705' , fontFamily: 'JejuMyeongjo'},

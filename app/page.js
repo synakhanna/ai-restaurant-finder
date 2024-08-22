@@ -4,6 +4,7 @@ import Body from './components/body';
 import Footer from './components/footer';
 import Header from './components/header';
 import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed';
+import styles from './page.module.css';
 
 
 export default function Home() {
@@ -16,12 +17,26 @@ export default function Home() {
     });
   };
 
+  const burgers = Array.from({ length: 10 });
+
   return (
     <div>
+      {burgers.map((_, i) => (
+        <div 
+          key={i} 
+          className={styles.floatingBurger} 
+          style={{ 
+            left: `${Math.random() < 0.5 ? Math.random() * 20 : 80 + Math.random() * 20}%`, 
+            animationDelay: `${Math.random() * 5}s` 
+          }}
+        >
+          🍔
+        </div>
+      ))}
       <Header handleScrollToChat={handleScrollToChat} />
       <section ref={chatSectionRef}>
         <Body />
-      <Footer />
+        <Footer />
       </section>
     </div>
   );

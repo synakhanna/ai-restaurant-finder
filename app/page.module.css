@@ -1,5 +1,15 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.floatingBurger {
+  position: fixed;
+  bottom: -50px;
+  font-size: 3em;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
 }
