@@ -5,20 +5,28 @@
 }
 
 .body {
-    background-color: #2c1608; /* Dark brown background for chat section */
+    background-color: #1C0A01;
     font-family: 'Jeju Myeongjo';
     height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .chatBox {
-    background-color: #2c1608;
+    width: 50%;
+    height: 80%;
+    padding: 1%;
+    background-color: #1C0A01;
     border-radius: 10px;
+    border: 2px solid #FFA13F;
     font-family: 'JejuMyeongjo';
   }
   
   .assistantMessage {
-    background-color: #ffa240;
-    color: #2c1608;
+    background-color: #7e4a2a;
+    color: #e6ba9e;
     border-radius: 16px;
     padding: 1rem;
     max-width: 75%;
@@ -26,11 +34,26 @@
   }
   
   .userMessage {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffa240;
+    background-color: #502c06;
+    color: #e6ba9e;
     border-radius: 16px;
     padding: 1rem;
     max-width: 75%;
     font-family: 'JejuMyeongjo';
   }
   
+  .sendButton {
+    background-color: #b18569;
+    color: #281705;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'JejuMyeongjo';
+    text-transform: none;
+  }
+
+  .sendButton:hover {
+    background-color: #502c06;
+    color:#e6ba9e;
+  }
