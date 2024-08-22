@@ -1,5 +1,5 @@
 import { Box, Button, Stack, TextField } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './body.module.css';
 
 export default function Body({ handleScrollToHeader }) {
@@ -10,6 +10,7 @@ export default function Body({ handleScrollToHeader }) {
     },
   ]);
   const [message, setMessage] = useState('');
+  const chatEndRef = useRef(null); // Ref to track the end of the chat
 
   const sendMessage = async () => {
     setMessage('');
@@ -52,16 +53,21 @@ export default function Body({ handleScrollToHeader }) {
     role: 'assistant',
     content: `Welcome to CraveQuest. How can I help with your food cravings today?`,
   };
-    
+  
   const resetChat = () => {
     setMessages([initialMessage]);
   };
 
+  // Auto-scroll to the bottom when messages change
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
   return (
     <Box className={styles.body}>
-        <button className={styles.upButton} onClick={handleScrollToHeader}>
-          Scroll Up ↑
-        </button>
+      <button className={styles.upButton} onClick={handleScrollToHeader}>
+        Scroll Up ↑
+      </button>
       <Stack spacing={3} className={styles.chatBox}>
         <Stack spacing={2} flexGrow={1} overflow="auto">
           {messages.map((message, index) => (
@@ -76,6 +82,7 @@ export default function Body({ handleScrollToHeader }) {
               </Box>
             </Box>
           ))}
+          <div ref={chatEndRef} /> {/* This element will be used as the target to scroll into view */}
         </Stack>
         <Stack direction={'row'} spacing={2}>
           <TextField
