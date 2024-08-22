@@ -27,3 +27,14 @@
     color: #2c1608;
     font-size: 20px;
   }
+
+  @media (max-width: 450px) {
+    .footerText {
+      font-size: 16px;
+    }
+  
+    .linkedin {
+      color: #2c1608;
+      font-size: 16px;
+  }
+}

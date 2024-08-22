@@ -48,34 +48,13 @@
   font-family: 'JejuMyeongjo';
 }
 
-
-@media (max-width: 1200px) {
-  .logo {
-    margin-top: 7%;
-  }
-
-  .title {
-    font-size: 120px;
-  }
-
-  .tagline {
-    font-size: 32px;
-  }
-
-  .button {
-    font-size: 18px;
-    padding: 12px 40px;
-    margin-bottom: 7%;
-  }
+@media (max-width: 800px) {
 
   .logoImage {
-    height: 90px;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo {
-    margin-top: 10%;
+    height: 80px;
+    width: auto;
+    box-shadow: none;
+    margin-top: 15%;
   }
 
   .title {
@@ -89,34 +68,27 @@
   .button {
     font-size: 16px;
     padding: 10px 30px;
-    margin-bottom: 10%;
-  }
-
-  .logoImage {
-    height: 80px;
+    margin-bottom: 15%;
   }
 }
 
-@media (max-width: 480px) {
-  .logo {
-    margin-top: 15%;
+@media (max-width: 520px) {
+  .title {
+    font-size: 80px;
   }
 
+  .tagline {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 450px) {
   .title {
-    font-size: 60px;
+    font-size: 70px;
   }
 
   .tagline {
     font-size: 18px;
   }
-
-  .button {
-    font-size: 14px;
-    padding: 8px 20px;
-    margin-bottom: 15%;
-  }
-
-  .logoImage {
-    height: 60px;
-  }
 }
+
