@@ -1,5 +1,5 @@
 'use client'
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import Body from './components/body';
 import Footer from './components/footer';
 import Header from './components/header';
@@ -8,6 +8,10 @@ import styles from './page.module.css';
 
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const headerSectionRef = useRef(null);
   const chatSectionRef = useRef(null);
 
