@@ -25,7 +25,6 @@
 .logoImage {
   height: 100px;
   width: auto;
-  box-shadow: none;
 }
 
 .title {
@@ -50,45 +49,69 @@
 
 @media (max-width: 800px) {
 
+  .header {
+    padding: 0% 5%;
+  }
+
   .logoImage {
-    height: 80px;
-    width: auto;
-    box-shadow: none;
-    margin-top: 15%;
+    margin-top: 20%;
   }
 
   .title {
-    font-size: 100px;
+    font-size: 130px;
   }
 
   .tagline {
-    font-size: 24px;
+    font-size: 35px;
+  }
+
+  .button {
+    margin-bottom: 20%;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .header {
+    padding: 10% 15%;
+  }
+
+  .logoImage {
+    height: 80px;
+    width: auto;
+  }
+
+  .title {
+    font-size: 110px;
+  }
+
+  .tagline {
+    font-size: 30px;
   }
 
   .button {
     font-size: 16px;
-    padding: 10px 30px;
-    margin-bottom: 15%;
+    padding: 10px 40px;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
   .title {
-    font-size: 80px;
+    font-size: 90px;
   }
 
   .tagline {
-    font-size: 20px;
+    font-size: 25px;
   }
+
 }
 
 @media (max-width: 450px) {
   .title {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   .tagline {
     font-size: 18px;
   }
 }
-

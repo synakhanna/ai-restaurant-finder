@@ -26,7 +26,7 @@ export default function Home() {
           key={i} 
           className={styles.floatingBurger} 
           style={{ 
-            left: `${Math.random() < 0.5 ? Math.random() * 20 : 80 + Math.random() * 20}%`, 
+            left: `${Math.random() < 0.5 ? Math.random() * 15 : 85 + Math.random() * 15}%`, 
             animationDelay: `${Math.random() * 5}s` 
           }}
         >
