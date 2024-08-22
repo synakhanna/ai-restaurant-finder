@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.title {
+  font-family: 'Jolly Lodger', cursive; /* This keeps the original header font */
+  font-size: 50px;
+  color: white;
+}
