@@ -10,7 +10,6 @@ export default function Body() {
     },
   ]);
   const [message, setMessage] = useState('');
-  const chatEndRef = useRef(null);
 
   const sendMessage = async () => {
     setMessage('');
@@ -48,6 +47,7 @@ export default function Body() {
       });
     });
   };
+  const chatEndRef = useRef(null);
 
   useEffect(() => {
     if (chatEndRef.current) {

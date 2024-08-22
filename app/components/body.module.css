@@ -17,6 +17,7 @@
 .chatBox {
   width: 50%;
   height: 80%;
+  overflow: auto;
   padding: 1%;
   background-color: #1C0A01;
   border-radius: 10px;
