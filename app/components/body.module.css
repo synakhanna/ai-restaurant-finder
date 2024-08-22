@@ -50,7 +50,7 @@
 
 .sendButton {
   background-color: #b18569;
-  color: #281705;
+  color: #271605;
   font-size: 15px;
   border: none;
   border-radius: 5px;
@@ -60,6 +60,6 @@
 }
 
 .sendButton:hover {
-  background-color: #502c06;
+  background-color: #7e4a2a;
   color: #e6ba9e;
 }

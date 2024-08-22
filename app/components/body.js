@@ -1,5 +1,5 @@
 import { Box, Button, Stack, TextField } from '@mui/material';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import styles from './body.module.css';
 
 export default function Body() {
@@ -47,13 +47,6 @@ export default function Body() {
       });
     });
   };
-  const chatEndRef = useRef(null);
-
-  useEffect(() => {
-    if (chatEndRef.current) {
-      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages]);
 
   return (
     <Box className={styles.body}>
@@ -71,7 +64,6 @@ export default function Body() {
               </Box>
             </Box>
           ))}
-          <div ref={chatEndRef} />
         </Stack>
         <Stack direction={'row'} spacing={2}>
           <TextField
@@ -84,7 +76,7 @@ export default function Body() {
               style: { backgroundColor: '#b18569', color: '#281705', fontFamily: 'JejuMyeongjo' },
             }}
             InputLabelProps={{
-              style: { color: '#281705', fontFamily: 'JejuMyeongjo' },
+              style: { color: '#27160587', fontFamily: 'JejuMyeongjo' },
             }}
             onKeyPress={(e) => {
               if (e.key === 'Enter') {
