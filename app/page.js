@@ -46,12 +46,12 @@ export default function Home() {
         </div>
       ))}
       <section ref={headerSectionRef}>
-      <Header handleScrollToChat={handleScrollToChat} />
+        <Header handleScrollToChat={handleScrollToChat} />
       </section>
       <section ref={chatSectionRef}>
         <Body handleScrollToHeader={handleScrollToHeader} />
         <Footer />
-        </section>
+      </section>
     </div>
   );
 }

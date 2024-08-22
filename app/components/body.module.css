@@ -22,17 +22,17 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   font-family: 'JejuMyeongjo';
 }
 
 .chatBox {
   width: 80vw;
-  height: 80vh;
+  height: 75vh;
   overflow: auto;
   padding: 1%;
-  margin-bottom: 5%;
+  margin-bottom: 5vh;
   background-color: #1C0A01;
   border-radius: 10px;
   border: 2px solid #FFA13F;
@@ -81,13 +81,7 @@
 @media (max-width: 650px) {
 
   .upButton {
-    margin-top: 20%;
-    margin-bottom: 20%;
     font-size: 16px;
     padding: 10px 40px;
-  }
-
-  .chatBox{
-    margin-bottom: 20%;
   }
 }

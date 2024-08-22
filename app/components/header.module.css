@@ -19,7 +19,7 @@
 .logo {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 5vh;
 }
 
 .logoImage {
@@ -43,7 +43,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 5%;
+  margin-bottom: 5vh;
   font-family: 'JejuMyeongjo';
 }
 
@@ -54,7 +54,7 @@
   }
 
   .logoImage {
-    margin-top: 20%;
+    margin-top: 10vh;
   }
 
   .title {
@@ -66,11 +66,15 @@
   }
 
   .button {
-    margin-bottom: 20%;
+    margin-bottom: 10vh;
   }
 }
 
 @media (max-width: 650px) {
+
+  .logoImage {
+    margin-top: 7vh;
+  }
 
   .header {
     padding: 10% 15%;
@@ -92,6 +96,7 @@
   .button {
     font-size: 16px;
     padding: 10px 40px;
+    margin-bottom: 7vh;
   }
 }
 
