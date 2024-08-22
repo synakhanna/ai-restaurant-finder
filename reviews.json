@@ -1,0 +1,235 @@
+{
+  "restaurants": [
+      {
+          "name": "Sushi Place",
+          "description": "A cozy place offering a wide range of sushi and Japanese dishes.",
+          "cuisine": "Japanese",
+          "rating": 4.5,
+          "category": "Fine dining",
+          "reviews": [
+              {"review": "Amazing sushi and great atmosphere!", "rating": 5},
+              {"review": "Good sushi, but the service was slow.", "rating": 4}
+          ]
+      },
+      {
+          "name": "Pasta House",
+          "description": "Authentic Italian pasta and more with a warm atmosphere.",
+          "cuisine": "Italian",
+          "rating": 4.7,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "The pasta was delicious and well-cooked.", "rating": 5},
+              {"review": "Friendly staff and a nice place to dine.", "rating": 4.5}
+          ]
+      },
+      {
+          "name": "Taco Haven",
+          "description": "Delicious Mexican tacos and street food with vibrant flavors.",
+          "cuisine": "Mexican",
+          "rating": 4.3,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Great tacos, but the place is a bit noisy.", "rating": 4},
+              {"review": "Authentic flavors, love their street food!", "rating": 4.5}
+          ]
+      },
+      {
+          "name": "The Burger Joint",
+          "description": "Juicy burgers and fries in a laid-back, modern setting.",
+          "cuisine": "American",
+          "rating": 4.6,
+          "category": "Fast food",
+          "reviews": [
+              {"review": "Best burgers in town!", "rating": 5},
+              {"review": "Tasty burgers, but the fries were cold.", "rating": 4}
+          ]
+      },
+      {
+          "name": "Vegan Delight",
+          "description": "Innovative vegan dishes that even non-vegans will love.",
+          "cuisine": "Vegan",
+          "rating": 4.8,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Amazing vegan food! Highly recommend.", "rating": 5},
+              {"review": "Great options for vegans and non-vegans alike.", "rating": 4.7}
+          ]
+      },
+      {
+          "name": "Bistro Bistro",
+          "description": "French bistro with classic dishes and a charming atmosphere.",
+          "cuisine": "French",
+          "rating": 4.4,
+          "category": "Fine dining",
+          "reviews": [
+              {"review": "Lovely French bistro with excellent food.", "rating": 4.5},
+              {"review": "Charming place, but a bit pricey.", "rating": 4.3}
+          ]
+      },
+      {
+          "name": "Spice of India",
+          "description": "Rich and flavorful Indian curries and street food.",
+          "cuisine": "Indian",
+          "rating": 4.2,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Delicious curries with great spice levels.", "rating": 4.3},
+              {"review": "Good food, but the service could be improved.", "rating": 4}
+          ]
+      },
+      {
+          "name": "Grill Master",
+          "description": "BBQ and grilled meats with a smoky flavor.",
+          "cuisine": "Barbecue",
+          "rating": 4.5,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Fantastic BBQ with a smoky flavor.", "rating": 4.6},
+              {"review": "Good food, but the portions were small.", "rating": 4.4}
+          ]
+      },
+      {
+          "name": "Seafood Shack",
+          "description": "Fresh seafood and ocean-inspired dishes.",
+          "cuisine": "Seafood",
+          "rating": 4.6,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Excellent seafood and great service.", "rating": 5},
+              {"review": "Fresh seafood, but the wait was long.", "rating": 4.3}
+          ]
+      },
+      {
+          "name": "Ramen World",
+          "description": "A wide variety of ramen with rich, flavorful broths.",
+          "cuisine": "Japanese",
+          "rating": 4.7,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Best ramen I've ever had!", "rating": 5},
+              {"review": "Great flavors, but a bit expensive.", "rating": 4.5}
+          ]
+      },
+      {
+          "name": "The Breakfast Spot",
+          "description": "Hearty breakfast dishes served all day.",
+          "cuisine": "American",
+          "rating": 4.4,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Delicious breakfast options and friendly staff.", "rating": 4.5},
+              {"review": "Good food, but the wait times can be long.", "rating": 4.3}
+          ]
+      },
+      {
+          "name": "Sushi Express",
+          "description": "Quick and tasty sushi rolls for a fast meal.",
+          "cuisine": "Japanese",
+          "rating": 4.3,
+          "category": "Fast food",
+          "reviews": [
+              {"review": "Quick service and tasty sushi.", "rating": 4.4},
+              {"review": "Good for a quick bite, but not the best sushi around.", "rating": 4.2}
+          ]
+      },
+      {
+          "name": "The Italian Bistro",
+          "description": "Traditional Italian cuisine with a cozy ambiance.",
+          "cuisine": "Italian",
+          "rating": 4.6,
+          "category": "Fine dining",
+          "reviews": [
+              {"review": "Wonderful Italian dishes and great atmosphere.", "rating": 4.7},
+              {"review": "Delicious food, but the service was slow.", "rating": 4.5}
+          ]
+      },
+      {
+          "name": "Dim Sum Delight",
+          "description": "Authentic dim sum and Chinese delicacies.",
+          "cuisine": "Chinese",
+          "rating": 4.5,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Great dim sum and friendly service.", "rating": 4.6},
+              {"review": "Good food, but the place was a bit crowded.", "rating": 4.4}
+          ]
+      },
+      {
+          "name": "Burger Heaven",
+          "description": "Gourmet burgers and a variety of toppings.",
+          "cuisine": "American",
+          "rating": 4.7,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "The burgers are fantastic and juicy.", "rating": 5},
+              {"review": "Great selection, but a bit pricey.", "rating": 4.5}
+          ]
+      },
+      {
+          "name": "Szechuan Spice",
+          "description": "Bold and spicy Szechuan dishes with a kick.",
+          "cuisine": "Chinese",
+          "rating": 4.4,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Spicy and flavorful Szechuan cuisine.", "rating": 4.5},
+              {"review": "Good food, but be prepared for the spice!", "rating": 4.3}
+          ]
+      },
+      {
+          "name": "Mediterranean Grill",
+          "description": "Healthy Mediterranean dishes with fresh ingredients.",
+          "cuisine": "Mediterranean",
+          "rating": 4.6,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Fresh and healthy Mediterranean options.", "rating": 4.7},
+              {"review": "Great food, but the service was average.", "rating": 4.5}
+          ]
+      },
+      {
+          "name": "Korean BBQ House",
+          "description": "Traditional Korean BBQ with a modern twist.",
+          "cuisine": "Korean",
+          "rating": 4.5,
+          "category": "Fine dining",
+          "reviews": [
+              {"review": "Excellent Korean BBQ with a unique twist.", "rating": 4.6},
+              {"review": "Great flavors, but a bit pricey.", "rating": 4.4}
+          ]
+      },
+      {
+          "name": "Pancake Paradise",
+          "description": "Delicious pancakes and breakfast items for all tastes.",
+          "cuisine": "American",
+          "rating": 4.3,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Amazing pancakes and a cozy atmosphere.", "rating": 4.5},
+              {"review": "Good breakfast, but the service was slow.", "rating": 4.0}
+          ]
+      },
+      {
+          "name": "Middle Eastern Flavors",
+          "description": "Savory Middle Eastern dishes with a rich taste.",
+          "cuisine": "Middle Eastern",
+          "rating": 4.6,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Fantastic Middle Eastern food with great spices.", "rating": 4.7},
+              {"review": "Delicious dishes, but the place was a bit small.", "rating": 4.5}
+          ]
+      },
+      {
+          "name": "Pizza Lovers",
+          "description": "Gourmet pizzas with a variety of toppings and styles.",
+          "cuisine": "Italian",
+          "rating": 4.7,
+          "category": "Casual dining",
+          "reviews": [
+              {"review": "Best pizza in town with creative toppings.", "rating": 5},
+              {"review": "Great pizza, but it took a while to get served.", "rating": 4.5}
+          ]
+      }
+  ]
+}
