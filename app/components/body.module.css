@@ -23,10 +23,14 @@
     border: 2px solid #FFA13F;
     font-family: 'JejuMyeongjo';
   }
-
+  .messageContainer {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
   .assistantMessage {
-    background-color: #7e4a2a;
-    color: #e6ba9e;
+    background-color: #b18569;
+    color: #281705;
     border-radius: 16px;
     padding: 1rem;
     max-width: 75%;
@@ -34,7 +38,7 @@
   }
   
   .userMessage {
-    background-color: #502c06;
+    background-color: #7e4a2a;
     color: #e6ba9e;
     border-radius: 16px;
     padding: 1rem;

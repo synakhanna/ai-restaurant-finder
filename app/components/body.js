@@ -53,7 +53,7 @@ export default function Body() {
       <Stack spacing={3} className={styles.chatBox}>
         <Stack spacing={2} flexGrow={1} overflow="auto">
           {messages.map((message, index) => (
-            <Box key={index} display="flex" justifyContent={ message.role === 'assistant' ? 'flex-start' : 'flex-end'}>
+            <Box style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }} key={index} display="flex" justifyContent={ message.role === 'assistant' ? 'flex-start' : 'flex-end'}>
               <Box className={ message.role === 'assistant' ? styles.assistantMessage : styles.userMessage } >
                 {message.content}
               </Box>
