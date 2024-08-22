@@ -50,8 +50,8 @@ export default function Home() {
       </section>
       <section ref={chatSectionRef}>
         <Body handleScrollToHeader={handleScrollToHeader} />
-      </section>
         <Footer />
+        </section>
     </div>
   );
 }
