@@ -1,25 +1,73 @@
-import styles from './page.module.css';
+'use client'
+import { useRef, useState } from 'react';
+import Body from './components/body';
+import Footer from './components/footer';
+import Header from './components/header';
 
 export default function Home() {
+  const [messages, setMessages] = useState([
+    {
+      role: 'assistant',
+      content: `Hi! i'm the Cravequest assistant. how can i help you with your food cravings today?`,
+    },
+  ]);
+  const [message, setMessage] = useState('');
+
+  const chatSectionRef = useRef(null);
+
+  const handleScrollToChat = () => {
+    chatSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const sendMessage = async () => {
+    setMessage('');
+    setMessages((messages) => [
+      ...messages,
+      { role: 'user', content: message },
+      { role: 'assistant', content: '' },
+    ]);
+
+    const response = fetch('/api/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify([...messages, { role: 'user', content: message }]),
+    }).then(async (res) => {
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let result = '';
+
+      return reader.read().then(function processText({ done, value }) {
+        if (done) {
+          return result;
+        }
+        const text = decoder.decode(value || new Uint8Array(), { stream: true });
+        setMessages((messages) => {
+          let lastMessage = messages[messages.length - 1];
+          let otherMessages = messages.slice(0, messages.length - 1);
+          return [
+            ...otherMessages,
+            { ...lastMessage, content: lastMessage.content + text },
+          ];
+        });
+        return reader.read().then(processText);
+      });
+    });
+  };
+
   return (
-    <div className={styles.page}>
-      <header className={styles.header}>
-        <div className={styles.logo}> 
-          <img src= 'logo.png' alt="CraveQuest Logo" className={styles.logoImage} />
-        </div>
-        <h1 className={styles.title}>CraveQuest</h1>
-        <p className={styles.tagline}>The solution to satisfying your food cravings.</p>
-        <button className={styles.button}>Find Food/Restaurant ↓</button>
-      </header>
-      
-      <main className={styles.main}>
-        <p className={styles.searchPrompt}>What type of food or restaurant are you looking for?</p>
-        <textarea className={styles.textarea}></textarea>
-      </main>
-      
-      <footer className={styles.footer}>
-        <p>© 2024 CraveQuest. All Rights Reserved.</p>
-      </footer>
+    <div>
+      <Header handleScrollToChat={handleScrollToChat} />
+      <section ref={chatSectionRef}>
+        <Body
+          messages={messages}
+          sendMessage={sendMessage}
+          message={message}
+          setMessage={setMessage}
+        />
+      </section>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.body {
+    background-color: #2c1608; /* Dark brown background for chat section */
+    font-family: 'Jeju Myeongjo', serif;
+  }
+  
+  .chatBox {
+    background-color: #2c1608;
+    border-radius: 10px;
+  }
+  
+  .assistantMessage {
+    background-color: #ffa240;
+    color: #2c1608;
+    border-radius: 16px;
+    padding: 1rem;
+    max-width: 75%;
+    font-family: 'Jeju Myeongjo', serif;
+  }
+  
+  .userMessage {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffa240;
+    border-radius: 16px;
+    padding: 1rem;
+    max-width: 75%;
+    font-family: 'Jeju Myeongjo', serif;
+  }
+  
