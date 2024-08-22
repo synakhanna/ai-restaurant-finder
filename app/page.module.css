@@ -1,6 +1,84 @@
+/* page.module.css */
 .page {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   min-height: 100vh;
+  background-color: #2c1608; /* Dark brown background */
+  color: #ffa240; /* Orange text color */
+  font-family: 'JejuMyeongjo', serif;
+}
+
+.header {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logoImage {
+  width: 60px;
+  height: auto;
+}
+
+.title {
+  font-size: 4rem;
+  margin: 0.5rem 0;
+}
+
+.tagline {
+  font-size: 1.6rem;
+  margin: 0 0 2rem;
+}
+
+.button {
+  background-color: #ffa240;
+  color: #2c1608;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  font-family: inherit;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.searchPrompt {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.textarea {
+  width: 90%;
+  max-width: 450px;
+  height: 150px;
+  padding: 1rem;
+  background-color: #ffa240;
+  border: none;
+  border-radius: 5px;
+  color: #2c1608;
+  font-size: 1rem;
+  resize: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #ffa240; /* Orange background color for footer */
+  color: #2c1608;
+  width: 100%;
+  font-size: 0.9rem;
 }
