@@ -50,7 +50,7 @@ export default function Body({ messages, sendMessage, message, setMessage }) {
         </Stack>
         <Stack direction={'row'} spacing={2}>
           <TextField
-            label="message"
+            label="What type of food/restaurant are you looking for?"
             fullWidth
             variant="outlined"
             value={message}

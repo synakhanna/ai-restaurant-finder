@@ -1,11 +1,19 @@
+@font-face {
+  font-family: 'JejuMyeongjo';
+  src: url('../JejuMyeongjo-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
 .body {
     background-color: #2c1608; /* Dark brown background for chat section */
-    font-family: 'Jeju Myeongjo', serif;
+    font-family: 'Jeju Myeongjo';
+    height: 93vh;
   }
   
   .chatBox {
     background-color: #2c1608;
     border-radius: 10px;
+    font-family: 'JejuMyeongjo';
   }
   
   .assistantMessage {
@@ -14,7 +22,7 @@
     border-radius: 16px;
     padding: 1rem;
     max-width: 75%;
-    font-family: 'Jeju Myeongjo', serif;
+    font-family: 'JejuMyeongjo';
   }
   
   .userMessage {
@@ -23,6 +31,6 @@
     border-radius: 16px;
     padding: 1rem;
     max-width: 75%;
-    font-family: 'Jeju Myeongjo', serif;
+    font-family: 'JejuMyeongjo';
   }
   

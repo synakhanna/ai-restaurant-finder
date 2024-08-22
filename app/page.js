@@ -8,7 +8,7 @@ export default function Home() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: `Hi! i'm the Cravequest assistant. how can i help you with your food cravings today?`,
+      content: `Welcome to CraveQuest. How can I help with your food cravings today?`,
     },
   ]);
   const [message, setMessage] = useState('');
