@@ -3,10 +3,11 @@
 .header {
   text-align: center;
   padding: 20px 0;
+  background: linear-gradient(to bottom, #AA4801, #471E01); /* Same background as body */
 }
 
 .title {
-  font-family: 'Jolly Lodger', cursive; /* This keeps the original header font */
+  font-family: 'Jolly Lodger', cursive;
   font-size: 50px;
   color: white;
 }

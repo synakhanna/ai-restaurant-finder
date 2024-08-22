@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom, #AA4801, #471E01);
+  background: linear-gradient(to bottom, #AA4801, #471E01); /* Background for the body */
   min-height: 100vh;
-  font-family: 'Jeju Myeongjo', serif; /* Applies JejuMyeongjo font globally */
+  font-family: 'Jeju Myeongjo', serif;
 }
 
 .topSection {
