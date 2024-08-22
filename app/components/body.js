@@ -1,6 +1,6 @@
 import { Box, Button, Stack, TextField } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
 import styles from './body.module.css';
-import { useState } from 'react';
 
 export default function Body() {
   const [messages, setMessages] = useState([
@@ -10,6 +10,7 @@ export default function Body() {
     },
   ]);
   const [message, setMessage] = useState('');
+  const chatEndRef = useRef(null);
 
   const sendMessage = async () => {
     setMessage('');
@@ -48,17 +49,29 @@ export default function Body() {
     });
   };
 
+  useEffect(() => {
+    if (chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
+
   return (
     <Box className={styles.body}>
       <Stack spacing={3} className={styles.chatBox}>
         <Stack spacing={2} flexGrow={1} overflow="auto">
           {messages.map((message, index) => (
-            <Box style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }} key={index} display="flex" justifyContent={ message.role === 'assistant' ? 'flex-start' : 'flex-end'}>
-              <Box className={ message.role === 'assistant' ? styles.assistantMessage : styles.userMessage } >
+            <Box
+              style={{ wordWrap: 'break-word', overflowWrap: 'break-word' }}
+              key={index}
+              display="flex"
+              justifyContent={message.role === 'assistant' ? 'flex-start' : 'flex-end'}
+            >
+              <Box className={message.role === 'assistant' ? styles.assistantMessage : styles.userMessage}>
                 {message.content}
               </Box>
             </Box>
           ))}
+          <div ref={chatEndRef} />
         </Stack>
         <Stack direction={'row'} spacing={2}>
           <TextField
@@ -68,10 +81,10 @@ export default function Body() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             InputProps={{
-              style: { backgroundColor: '#b18569', color: '#281705' , fontFamily: 'JejuMyeongjo'},
+              style: { backgroundColor: '#b18569', color: '#281705', fontFamily: 'JejuMyeongjo' },
             }}
             InputLabelProps={{
-              style: { color: '#281705' , fontFamily: 'JejuMyeongjo'},
+              style: { color: '#281705', fontFamily: 'JejuMyeongjo' },
             }}
             onKeyPress={(e) => {
               if (e.key === 'Enter') {

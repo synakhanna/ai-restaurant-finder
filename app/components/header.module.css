@@ -5,46 +5,118 @@
 }
 
 .header {
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    color: #FFA13F;
-    background-color: #1C0A01;
-    font-family: 'JejuMyeongjo';
-  }
-  
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFA13F;
+  background-color: #1C0A01;
+  font-family: 'JejuMyeongjo';
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.logoImage {
+  height: 100px;
+  width: auto;
+  box-shadow: none;
+}
+
+.title {
+  font-size: 150px;
+}
+
+.tagline {
+  font-size: 40px;
+}
+
+.button {
+  background-color: #ffa240;
+  color: #2c1608;
+  font-size: 20px;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5%;
+  font-family: 'JejuMyeongjo';
+}
+
+
+@media (max-width: 1200px) {
   .logo {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
+    margin-top: 7%;
   }
-  
-  .logoImage {
-    height: 100px;
-    width: auto;
-    box-shadow: none;
-  }
-  
+
   .title {
-    font-size: 150px;
+    font-size: 120px;
   }
-  
+
   .tagline {
-    font-size: 40px;
+    font-size: 32px;
   }
-  
+
   .button {
-    background-color: #ffa240;
-    color: #2c1608;
-    font-size: 20px;
-    padding: 15px 50px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 5%;
-    font-family: 'JejuMyeongjo';
+    font-size: 18px;
+    padding: 12px 40px;
+    margin-bottom: 7%;
   }
-  
+
+  .logoImage {
+    height: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-top: 10%;
+  }
+
+  .title {
+    font-size: 100px;
+  }
+
+  .tagline {
+    font-size: 24px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 30px;
+    margin-bottom: 10%;
+  }
+
+  .logoImage {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    margin-top: 15%;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 20px;
+    margin-bottom: 15%;
+  }
+
+  .logoImage {
+    height: 60px;
+  }
+}
