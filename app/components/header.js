@@ -1,11 +1,13 @@
-import styles from './header.module.css';
+import styles from './components.module.css';
+import logo from './images/logo.png';
 
-const Header = () => {
+export default function Header() {
   return (
     <header className={styles.header}>
-      <h1 className={styles.title}>CraveQuest</h1>
+      <img src={logo} alt="CraveQuest logo" />
+      <h1>CraveQuest</h1>
+      <p>The solution to satisfying your food cravings.</p>
+      <button>Find Food/Restaurant ↓</button>
     </header>
   );
-};
-
-export default Header;
+}

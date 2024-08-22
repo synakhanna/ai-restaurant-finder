@@ -1,6 +1,7 @@
 import Body from './components/body';
-import Footer from './components/footer';
+import React from 'react';
 import Header from './components/header';
+import Footer from './components/footer';
 import styles from './page.module.css';
 
 export default function Page() {

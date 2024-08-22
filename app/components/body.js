@@ -1,28 +1,9 @@
-import styles from './body.module.css';
+import styles from './components.module.css';
 
-// Directly referencing the images with their relative paths
-const Body = () => {
+export default function Body() {
   return (
     <main className={styles.body}>
-      {/* Upper Section with Server and Button */}
-      <div className={styles.topSection}>
-        <div className={styles.serverContainer}>
-          <img src="./images/server.png" alt="Server" className={styles.serverImage} />
-        </div>
-        <p className={styles.tagline}>The solution to satisfying your cravings.</p>
-        <a href="#plateSection" className={styles.findFoodButton}>
-          Find Food
-        </a>
-      </div>
-
-      {/* Lower Section with Plate, Fork, and Knife */}
-      <div id="plateSection" className={styles.plateSection}>
-        <div className={styles.utensils}>
-          <img src="./images/plate.png" alt="Plate" className={styles.plate} />
-        </div>
-      </div>
+      <button>What type of food or restaurant are you looking for?</button>
     </main>
   );
-};
-
-export default Body;
+}
