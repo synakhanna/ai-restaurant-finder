@@ -48,6 +48,15 @@ export default function Body({ handleScrollToHeader }) {
     });
   };
 
+  const initialMessage = {
+    role: 'assistant',
+    content: `Welcome to CraveQuest. How can I help with your food cravings today?`,
+  };
+    
+  const resetChat = () => {
+    setMessages([initialMessage]);
+  };
+
   return (
     <Box className={styles.body}>
         <button className={styles.upButton} onClick={handleScrollToHeader}>
@@ -88,6 +97,7 @@ export default function Body({ handleScrollToHeader }) {
             }}
           />
           <Button onClick={sendMessage} className={styles.sendButton}>Send</Button>
+          <Button onClick={resetChat} className={styles.sendButton}>Reset</Button>
         </Stack>
       </Stack>
     </Box>
