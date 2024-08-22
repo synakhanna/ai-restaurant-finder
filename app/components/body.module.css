@@ -7,11 +7,24 @@
 .body {
   background-color: #1C0A01;
   font-family: 'JejuMyeongjo';
-  height: 93vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.upButton {
+  background-color: #ffa240;
+  color: #2c1608;
+  font-size: 20px;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: 'JejuMyeongjo';
 }
 
 .chatBox {
@@ -19,6 +32,7 @@
   height: 80%;
   overflow: auto;
   padding: 1%;
+  margin-bottom: 5%;
   background-color: #1C0A01;
   border-radius: 10px;
   border: 2px solid #FFA13F;
@@ -62,4 +76,18 @@
 .sendButton:hover {
   background-color: #7e4a2a;
   color: #e6ba9e;
+}
+
+@media (max-width: 650px) {
+
+  .upButton {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    font-size: 16px;
+    padding: 10px 40px;
+  }
+
+  .chatBox{
+    margin-bottom: 20%;
+  }
 }

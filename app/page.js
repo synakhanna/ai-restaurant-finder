@@ -8,10 +8,18 @@ import styles from './page.module.css';
 
 
 export default function Home() {
+  const headerSectionRef = useRef(null);
   const chatSectionRef = useRef(null);
 
   const handleScrollToChat = () => {
     smoothScrollIntoView(chatSectionRef.current, {
+      behavior: 'smooth',
+      duration: 2000
+    });
+  };
+
+  const handleScrollToHeader = () => {
+    smoothScrollIntoView(headerSectionRef.current, {
       behavior: 'smooth',
       duration: 2000
     });
@@ -33,11 +41,13 @@ export default function Home() {
           🍔
         </div>
       ))}
+      <section ref={headerSectionRef}>
       <Header handleScrollToChat={handleScrollToChat} />
-      <section ref={chatSectionRef}>
-        <Body />
-        <Footer />
       </section>
+      <section ref={chatSectionRef}>
+        <Body handleScrollToHeader={handleScrollToHeader} />
+      </section>
+        <Footer />
     </div>
   );
 }

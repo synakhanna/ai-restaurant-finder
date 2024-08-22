@@ -2,7 +2,7 @@ import { Box, Button, Stack, TextField } from '@mui/material';
 import { useState } from 'react';
 import styles from './body.module.css';
 
-export default function Body() {
+export default function Body({ handleScrollToHeader }) {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
@@ -50,6 +50,9 @@ export default function Body() {
 
   return (
     <Box className={styles.body}>
+        <button className={styles.upButton} onClick={handleScrollToHeader}>
+          Scroll Up ↑
+        </button>
       <Stack spacing={3} className={styles.chatBox}>
         <Stack spacing={2} flexGrow={1} overflow="auto">
           {messages.map((message, index) => (
