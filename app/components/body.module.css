@@ -15,7 +15,7 @@
 }
 
 .chatBox {
-  width: 50%;
+  width: 80%;
   height: 80%;
   overflow: auto;
   padding: 1%;
@@ -62,44 +62,4 @@
 .sendButton:hover {
   background-color: #502c06;
   color: #e6ba9e;
-}
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  .chatBox {
-    width: 70%;
-    height: auto;
-  }
-
-  .assistantMessage, .userMessage {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .chatBox {
-    width: 80%;
-    height: auto;
-  }
-
-  .assistantMessage, .userMessage {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .chatBox {
-    width: 100%;
-    height: auto;
-  }
-
-  .assistantMessage, .userMessage {
-    max-width: 100%;
-    font-size: 14px;
-  }
-
-  .sendButton {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
 }
