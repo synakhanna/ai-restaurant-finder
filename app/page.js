@@ -1,5 +1,5 @@
 'use client'
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Body from './components/body';
 import Footer from './components/footer';
 import Header from './components/header';
@@ -29,11 +29,12 @@ export default function Home() {
     });
   };
 
+  const [showEmoji, setShowEmoji] = useState(true);
   const burgers = Array.from({ length: 10 });
 
   return (
     <div>
-      {burgers.map((_, i) => (
+      {showEmoji && burgers.map((_, i) => (
         <div 
           key={i} 
           className={styles.floatingBurger} 
@@ -46,7 +47,11 @@ export default function Home() {
         </div>
       ))}
       <section ref={headerSectionRef}>
-        <Header handleScrollToChat={handleScrollToChat} />
+      <Header 
+        handleScrollToChat={handleScrollToChat} 
+        showEmoji={showEmoji} 
+        setShowEmoji={setShowEmoji} 
+      />
       </section>
       <section ref={chatSectionRef}>
         <Body handleScrollToHeader={handleScrollToHeader} />
