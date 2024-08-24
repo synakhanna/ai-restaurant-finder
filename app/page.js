@@ -8,6 +8,8 @@ import styles from './page.module.css';
 
 
 export default function Home() {
+  const food = Array.from({ length: 10 });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,29 +31,35 @@ export default function Home() {
     });
   };
 
+  const emojis = ['🍔', '🍕', '🌮', '🍦', '🥗'];
+  const [emojiIndex, setEmojiIndex] = useState(0);
   const [showEmoji, setShowEmoji] = useState(true);
-  const burgers = Array.from({ length: 10 });
+
+  const handleSwitchChange = () => {
+    setEmojiIndex((prevIndex) => (prevIndex + 1) % emojis.length);
+    setShowEmoji(!showEmoji);
+  };
 
   return (
     <div>
-      {showEmoji && burgers.map((_, i) => (
+      {showEmoji && food.map((_, i) => (
         <div 
           key={i} 
-          className={styles.floatingBurger} 
+          className={styles.floatingFood} 
           style={{ 
             left: `${Math.random() < 0.5 ? Math.random() * 5 : 95 + Math.random() * 5}%`, 
             animationDelay: `${Math.random() * 5}s` 
           }}
         >
-          🍔
+          {emojis[emojiIndex]}
         </div>
       ))}
       <section ref={headerSectionRef}>
-      <Header 
-        handleScrollToChat={handleScrollToChat} 
-        showEmoji={showEmoji} 
-        setShowEmoji={setShowEmoji} 
-      />
+        <Header 
+          handleScrollToChat={handleScrollToChat} 
+          showEmoji={showEmoji} 
+          setShowEmoji={handleSwitchChange} 
+        />
       </section>
       <section ref={chatSectionRef}>
         <Body handleScrollToHeader={handleScrollToHeader} />
