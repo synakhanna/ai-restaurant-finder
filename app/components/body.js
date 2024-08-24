@@ -105,10 +105,10 @@ export default function Body({ handleScrollToHeader }) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             InputProps={{
-              style: { backgroundColor: '#b18569', color: '#281705', fontFamily: 'JejuMyeongjo' },
+              style: { backgroundColor: '#c5895b', color: '#281705', fontFamily: 'JejuMyeongjo' },
             }}
             InputLabelProps={{
-              style: { color: '#2716058', fontFamily: 'JejuMyeongjo' },
+              style: { color: '#27160582', fontFamily: 'JejuMyeongjo' },
             }}
             onKeyPress={(e) => {
               if (e.key === 'Enter') {
