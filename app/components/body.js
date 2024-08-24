@@ -63,6 +63,19 @@ export default function Body({ handleScrollToHeader }) {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <Box className={styles.body}>
       <button className={styles.upButton} onClick={handleScrollToHeader}>
@@ -86,7 +99,7 @@ export default function Body({ handleScrollToHeader }) {
         </Stack>
         <Stack direction={'row'} spacing={2}>
           <TextField
-            label="What type of food/restaurant are you looking for?"
+            label={windowWidth <= 810 ? "Type here..." : "What type of food/restaurant are you looking for?Type here..."}
             fullWidth
             variant="outlined"
             value={message}
@@ -95,7 +108,7 @@ export default function Body({ handleScrollToHeader }) {
               style: { backgroundColor: '#b18569', color: '#281705', fontFamily: 'JejuMyeongjo' },
             }}
             InputLabelProps={{
-              style: { color: '#27160587', fontFamily: 'JejuMyeongjo' },
+              style: { color: '#2716058', fontFamily: 'JejuMyeongjo' },
             }}
             onKeyPress={(e) => {
               if (e.key === 'Enter') {

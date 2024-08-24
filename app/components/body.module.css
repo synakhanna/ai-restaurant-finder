@@ -63,19 +63,19 @@
 }
 
 .sendButton {
-  background-color: #b18569;
-  color: #271605;
-  font-size: 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'JejuMyeongjo';
-  text-transform: none;
+  background-color: #b18569  !important;
+  color: #271605  !important;
+  font-size: 15px  !important;
+  border: none  !important;
+  border-radius: 5px  !important;
+  cursor: pointer  !important;
+  font-family: 'JejuMyeongjo'  !important;
+  text-transform: none  !important;
 }
 
 .sendButton:hover {
-  background-color: #5e3821;
-  color: #e6ba9e;
+  background-color: #5e3821  !important;
+  color: #e6ba9e  !important;
 }
 
 @media (max-width: 650px) {

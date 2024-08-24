@@ -8,9 +8,11 @@ import styles from './page.module.css';
 
 
 export default function Home() {
-  const food = Array.from({ length: 10 });
 
   useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
     window.scrollTo(0, 0);
   }, []);
   
@@ -30,6 +32,8 @@ export default function Home() {
       duration: 2000
     });
   };
+
+  const food = Array.from({ length: 10 });
 
   const emojis = ['🍔', '🍕', '🌮', '🍦', '🥗'];
   const [emojiIndex, setEmojiIndex] = useState(0);
