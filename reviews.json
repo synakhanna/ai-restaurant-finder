@@ -1,235 +1,200 @@
 {
-  "restaurants": [
+    "restaurants": [
       {
-          "name": "Sushi Place",
-          "description": "A cozy place offering a wide range of sushi and Japanese dishes.",
-          "cuisine": "Japanese",
-          "rating": 4.5,
-          "category": "Fine dining",
-          "reviews": [
-              {"review": "Amazing sushi and great atmosphere!", "rating": 5},
-              {"review": "Good sushi, but the service was slow.", "rating": 4}
-          ]
+        "name": "Sushi Place",
+        "description": "A cozy place offering a wide range of sushi and Japanese dishes, from fresh sashimi and nigiri to creative rolls and tempura. Known for its authentic flavors and a relaxing atmosphere perfect for sushi enthusiasts.",
+        "cuisine": "Japanese",
+        "rating": 4.5,
+        "category": "Fine dining",
+        "priceRange": "$50-$70",
+        "location": "123 Sushi St, Tokyo",
+        "reviews": [
+          {"review": "Amazing sushi and great atmosphere!"},
+          {"review": "Good sushi, but the service was slow."}
+        ]
       },
       {
-          "name": "Pasta House",
-          "description": "Authentic Italian pasta and more with a warm atmosphere.",
-          "cuisine": "Italian",
-          "rating": 4.7,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "The pasta was delicious and well-cooked.", "rating": 5},
-              {"review": "Friendly staff and a nice place to dine.", "rating": 4.5}
-          ]
+        "name": "Pasta House",
+        "description": "Authentic Italian pasta and more with a warm atmosphere. Offers a variety of pasta dishes including classic spaghetti, rich lasagna, and creamy carbonara. Enjoy traditional Italian cuisine in a relaxed, family-friendly setting.",
+        "cuisine": "Italian",
+        "rating": 4.7,
+        "category": "Casual dining",
+        "priceRange": "$20-$40",
+        "location": "456 Pasta Ave, Rome",
+        "reviews": [
+          {"review": "The pasta was delicious and well-cooked."},
+          {"review": "Friendly staff and a nice place to dine."}
+        ]
       },
       {
-          "name": "Taco Haven",
-          "description": "Delicious Mexican tacos and street food with vibrant flavors.",
-          "cuisine": "Mexican",
-          "rating": 4.3,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Great tacos, but the place is a bit noisy.", "rating": 4},
-              {"review": "Authentic flavors, love their street food!", "rating": 4.5}
-          ]
+        "name": "Taco Haven",
+        "description": "Delicious Mexican tacos and street food with vibrant flavors. Known for its range of taco fillings, including carne asada, al pastor, and vegetarian options. Enjoy authentic Mexican street food in a lively, casual setting.",
+        "cuisine": "Mexican",
+        "rating": 4.3,
+        "category": "Casual dining",
+        "priceRange": "$10-$25",
+        "location": "789 Taco Blvd, Mexico City",
+        "reviews": [
+          {"review": "Great tacos, but the place is a bit noisy."},
+          {"review": "Authentic flavors, love their street food!"}
+        ]
       },
       {
-          "name": "The Burger Joint",
-          "description": "Juicy burgers and fries in a laid-back, modern setting.",
-          "cuisine": "American",
-          "rating": 4.6,
-          "category": "Fast food",
-          "reviews": [
-              {"review": "Best burgers in town!", "rating": 5},
-              {"review": "Tasty burgers, but the fries were cold.", "rating": 4}
-          ]
+        "name": "The Burger Joint",
+        "description": "Juicy burgers and fries in a laid-back, modern setting. Offers a variety of gourmet burgers with unique toppings and sides, including crispy fries and onion rings. Perfect for a quick, satisfying meal.",
+        "cuisine": "American",
+        "rating": 4.6,
+        "category": "Fast food",
+        "priceRange": "$15-$30",
+        "location": "101 Burger Rd, New York",
+        "reviews": [
+          {"review": "Best burgers in town!"},
+          {"review": "Tasty burgers, but the fries were cold."}
+        ]
       },
       {
-          "name": "Vegan Delight",
-          "description": "Innovative vegan dishes that even non-vegans will love.",
-          "cuisine": "Vegan",
-          "rating": 4.8,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Amazing vegan food! Highly recommend.", "rating": 5},
-              {"review": "Great options for vegans and non-vegans alike.", "rating": 4.7}
-          ]
+        "name": "Vegan Delight",
+        "description": "Innovative vegan dishes that even non-vegans will love. Offers a range of plant-based options including hearty burgers, fresh salads, and savory bowls. Known for its creative approach to vegan cuisine and a welcoming atmosphere.",
+        "cuisine": "Vegan",
+        "rating": 4.8,
+        "category": "Casual dining",
+        "priceRange": "$20-$35",
+        "location": "202 Vegan Way, Los Angeles",
+        "reviews": [
+          {"review": "Amazing vegan food! Highly recommend."},
+          {"review": "Great options for vegans and non-vegans alike."}
+        ]
       },
       {
-          "name": "Bistro Bistro",
-          "description": "French bistro with classic dishes and a charming atmosphere.",
-          "cuisine": "French",
-          "rating": 4.4,
-          "category": "Fine dining",
-          "reviews": [
-              {"review": "Lovely French bistro with excellent food.", "rating": 4.5},
-              {"review": "Charming place, but a bit pricey.", "rating": 4.3}
-          ]
+        "name": "Bistro Bistro",
+        "description": "French bistro with classic dishes and a charming atmosphere. Specializes in traditional French cuisine such as coq au vin, ratatouille, and crème brûlée. Enjoy a sophisticated dining experience in a cozy, elegant setting.",
+        "cuisine": "French",
+        "rating": 4.4,
+        "category": "Fine dining",
+        "priceRange": "$60-$80",
+        "location": "303 Bistro Blvd, Paris",
+        "reviews": [
+          {"review": "Lovely French bistro with excellent food."},
+          {"review": "Charming place, but a bit pricey."}
+        ]
       },
       {
-          "name": "Spice of India",
-          "description": "Rich and flavorful Indian curries and street food.",
-          "cuisine": "Indian",
-          "rating": 4.2,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Delicious curries with great spice levels.", "rating": 4.3},
-              {"review": "Good food, but the service could be improved.", "rating": 4}
-          ]
+        "name": "Spice of India",
+        "description": "Rich and flavorful Indian curries and street food. Offers a diverse menu with spicy curries, flavorful biryanis, and crispy samosas. Perfect for those who enjoy bold flavors and vibrant Indian spices.",
+        "cuisine": "Indian",
+        "rating": 4.2,
+        "category": "Casual dining",
+        "priceRange": "$15-$30",
+        "location": "404 Spice St, Mumbai",
+        "reviews": [
+          {"review": "Delicious curries with great spice levels."},
+          {"review": "Good food, but the service could be improved."}
+        ]
       },
       {
-          "name": "Grill Master",
-          "description": "BBQ and grilled meats with a smoky flavor.",
-          "cuisine": "Barbecue",
-          "rating": 4.5,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Fantastic BBQ with a smoky flavor.", "rating": 4.6},
-              {"review": "Good food, but the portions were small.", "rating": 4.4}
-          ]
+        "name": "Grill Master",
+        "description": "BBQ and grilled meats with a smoky flavor. Known for its slow-cooked ribs, tender brisket, and juicy grilled chicken. Offers a casual, family-friendly environment with a focus on flavorful BBQ dishes.",
+        "cuisine": "Barbecue",
+        "rating": 4.5,
+        "category": "Casual dining",
+        "priceRange": "$25-$40",
+        "location": "505 Grill Ln, Austin",
+        "reviews": [
+          {"review": "Fantastic BBQ with a smoky flavor."},
+          {"review": "Good food, but the portions were small."}
+        ]
       },
       {
-          "name": "Seafood Shack",
-          "description": "Fresh seafood and ocean-inspired dishes.",
-          "cuisine": "Seafood",
-          "rating": 4.6,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Excellent seafood and great service.", "rating": 5},
-              {"review": "Fresh seafood, but the wait was long.", "rating": 4.3}
-          ]
+        "name": "Seafood Shack",
+        "description": "Fresh seafood and ocean-inspired dishes. Features a variety of seafood options including oysters, shrimp, and fish tacos. Offers a relaxed atmosphere with a focus on fresh, quality ingredients.",
+        "cuisine": "Seafood",
+        "rating": 4.6,
+        "category": "Casual dining",
+        "priceRange": "$30-$50",
+        "location": "606 Seafood Rd, Miami",
+        "reviews": [
+          {"review": "Excellent seafood and great service."},
+          {"review": "Fresh seafood, but the wait was long."}
+        ]
       },
       {
-          "name": "Ramen World",
-          "description": "A wide variety of ramen with rich, flavorful broths.",
-          "cuisine": "Japanese",
-          "rating": 4.7,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Best ramen I've ever had!", "rating": 5},
-              {"review": "Great flavors, but a bit expensive.", "rating": 4.5}
-          ]
+        "name": "Ramen World",
+        "description": "A wide variety of ramen with rich, flavorful broths. Offers various ramen styles including tonkotsu, shoyu, and miso, each crafted with high-quality ingredients and authentic techniques. Perfect for ramen lovers.",
+        "cuisine": "Japanese",
+        "rating": 4.7,
+        "category": "Casual dining",
+        "priceRange": "$15-$30",
+        "location": "707 Ramen Ave, Tokyo",
+        "reviews": [
+          {"review": "Best ramen I've ever had!"},
+          {"review": "Great flavors, but a bit expensive."}
+        ]
       },
       {
-          "name": "The Breakfast Spot",
-          "description": "Hearty breakfast dishes served all day.",
-          "cuisine": "American",
-          "rating": 4.4,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Delicious breakfast options and friendly staff.", "rating": 4.5},
-              {"review": "Good food, but the wait times can be long.", "rating": 4.3}
-          ]
+        "name": "The Breakfast Spot",
+        "description": "Hearty breakfast dishes served all day. Enjoy a range of breakfast favorites including fluffy pancakes, crispy bacon, and savory omelets. Known for its comforting meals and friendly service.",
+        "cuisine": "American",
+        "rating": 4.4,
+        "category": "Casual dining",
+        "priceRange": "$10-$25",
+        "location": "808 Breakfast St, Denver",
+        "reviews": [
+          {"review": "Delicious breakfast options and friendly staff."},
+          {"review": "Good food, but the wait times can be long."}
+        ]
       },
       {
-          "name": "Sushi Express",
-          "description": "Quick and tasty sushi rolls for a fast meal.",
-          "cuisine": "Japanese",
-          "rating": 4.3,
-          "category": "Fast food",
-          "reviews": [
-              {"review": "Quick service and tasty sushi.", "rating": 4.4},
-              {"review": "Good for a quick bite, but not the best sushi around.", "rating": 4.2}
-          ]
+        "name": "Sushi Express",
+        "description": "Quick and tasty sushi rolls for a fast meal. Specializes in fresh, ready-to-eat sushi rolls and sashimi. Ideal for a quick lunch or dinner with minimal wait time.",
+        "cuisine": "Japanese",
+        "rating": 4.3,
+        "category": "Fast food",
+        "priceRange": "$10-$20",
+        "location": "909 Sushi Rd, Tokyo",
+        "reviews": [
+          {"review": "Quick service and tasty sushi."},
+          {"review": "Good for a quick bite, but not the best sushi around."}
+        ]
       },
       {
-          "name": "The Italian Bistro",
-          "description": "Traditional Italian cuisine with a cozy ambiance.",
-          "cuisine": "Italian",
-          "rating": 4.6,
-          "category": "Fine dining",
-          "reviews": [
-              {"review": "Wonderful Italian dishes and great atmosphere.", "rating": 4.7},
-              {"review": "Delicious food, but the service was slow.", "rating": 4.5}
-          ]
+        "name": "The Italian Bistro",
+        "description": "Traditional Italian cuisine with a cozy ambiance. Offers a range of Italian favorites such as pizza, pasta, and risotto. Known for its warm atmosphere and authentic flavors.",
+        "cuisine": "Italian",
+        "rating": 4.6,
+        "category": "Fine dining",
+        "priceRange": "$50-$70",
+        "location": "1010 Italian Blvd, Florence",
+        "reviews": [
+          {"review": "Wonderful Italian dishes and great atmosphere."},
+          {"review": "Delicious food, but the service was slow."}
+        ]
       },
       {
-          "name": "Dim Sum Delight",
-          "description": "Authentic dim sum and Chinese delicacies.",
-          "cuisine": "Chinese",
-          "rating": 4.5,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Great dim sum and friendly service.", "rating": 4.6},
-              {"review": "Good food, but the place was a bit crowded.", "rating": 4.4}
-          ]
+        "name": "Dim Sum Delight",
+        "description": "Authentic dim sum and Chinese delicacies. Offers a variety of dim sum dishes including dumplings, buns, and spring rolls. Enjoy traditional Chinese flavors in a vibrant setting.",
+        "cuisine": "Chinese",
+        "rating": 4.5,
+        "category": "Casual dining",
+        "priceRange": "$20-$35",
+        "location": "1111 Dim Sum St, Beijing",
+        "reviews": [
+          {"review": "Great dim sum and friendly service."},
+          {"review": "Good food, but the place was a bit crowded."}
+        ]
       },
       {
-          "name": "Burger Heaven",
-          "description": "Gourmet burgers and a variety of toppings.",
-          "cuisine": "American",
-          "rating": 4.7,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "The burgers are fantastic and juicy.", "rating": 5},
-              {"review": "Great selection, but a bit pricey.", "rating": 4.5}
-          ]
-      },
-      {
-          "name": "Szechuan Spice",
-          "description": "Bold and spicy Szechuan dishes with a kick.",
-          "cuisine": "Chinese",
-          "rating": 4.4,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Spicy and flavorful Szechuan cuisine.", "rating": 4.5},
-              {"review": "Good food, but be prepared for the spice!", "rating": 4.3}
-          ]
-      },
-      {
-          "name": "Mediterranean Grill",
-          "description": "Healthy Mediterranean dishes with fresh ingredients.",
-          "cuisine": "Mediterranean",
-          "rating": 4.6,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Fresh and healthy Mediterranean options.", "rating": 4.7},
-              {"review": "Great food, but the service was average.", "rating": 4.5}
-          ]
-      },
-      {
-          "name": "Korean BBQ House",
-          "description": "Traditional Korean BBQ with a modern twist.",
-          "cuisine": "Korean",
-          "rating": 4.5,
-          "category": "Fine dining",
-          "reviews": [
-              {"review": "Excellent Korean BBQ with a unique twist.", "rating": 4.6},
-              {"review": "Great flavors, but a bit pricey.", "rating": 4.4}
-          ]
-      },
-      {
-          "name": "Pancake Paradise",
-          "description": "Delicious pancakes and breakfast items for all tastes.",
-          "cuisine": "American",
-          "rating": 4.3,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Amazing pancakes and a cozy atmosphere.", "rating": 4.5},
-              {"review": "Good breakfast, but the service was slow.", "rating": 4.0}
-          ]
-      },
-      {
-          "name": "Middle Eastern Flavors",
-          "description": "Savory Middle Eastern dishes with a rich taste.",
-          "cuisine": "Middle Eastern",
-          "rating": 4.6,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Fantastic Middle Eastern food with great spices.", "rating": 4.7},
-              {"review": "Delicious dishes, but the place was a bit small.", "rating": 4.5}
-          ]
-      },
-      {
-          "name": "Pizza Lovers",
-          "description": "Gourmet pizzas with a variety of toppings and styles.",
-          "cuisine": "Italian",
-          "rating": 4.7,
-          "category": "Casual dining",
-          "reviews": [
-              {"review": "Best pizza in town with creative toppings.", "rating": 5},
-              {"review": "Great pizza, but it took a while to get served.", "rating": 4.5}
-          ]
+        "name": "Burger Heaven",
+        "description": "Gourmet burgers and a variety of toppings. Known for its creative burger combinations and high-quality ingredients. Offers a relaxed dining experience with a focus on tasty, satisfying burgers.",
+        "cuisine": "American",
+        "rating": 4.7,
+        "category": "Casual dining",
+        "priceRange": "$15-$30",
+        "location": "1212 Burger Blvd, Los Angeles",
+        "reviews": [
+          {"review": "Best gourmet burgers in town."},
+          {"review": "Great burgers, but the place can get noisy."}
+        ]
       }
-  ]
-}
+    ]
+  }
+  
