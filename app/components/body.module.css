@@ -15,7 +15,7 @@
 }
 
 .upButton {
-  background-color: #ffa240;
+  background-color: #ffa340cb;
   color: #2c1608;
   font-size: 20px;
   padding: 15px 50px;
@@ -33,9 +33,9 @@
   overflow: auto;
   padding: 1%;
   margin-bottom: 5vh;
-  background-color: #1C0A01;
+  background-color: #74331c;
   border-radius: 10px;
-  border: 2px solid #FFA13F;
+  border: 6px solid #c5895b;
   font-family: 'JejuMyeongjo';
   scroll-behavior: smooth;
 }
@@ -53,29 +53,29 @@
 }
 
 .assistantMessage {
-  background-color: #b18569;
+  background-color: #c5895b;
   color: #281705;
 }
 
 .userMessage {
-  background-color: #5e3821;
-  color: #e6ba9e;
+  background-color: #c5895b;
+  color: #281705;
 }
 
 .sendButton {
-  background-color: #b18569;
-  color: #271605;
-  font-size: 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'JejuMyeongjo';
-  text-transform: none;
+  background-color: #c5895b  !important;
+  color: #271605  !important;
+  font-size: 15px  !important;
+  border: none  !important;
+  border-radius: 5px  !important;
+  cursor: pointer  !important;
+  font-family: 'JejuMyeongjo'  !important;
+  text-transform: none  !important;
 }
 
 .sendButton:hover {
-  background-color: #5e3821;
-  color: #e6ba9e;
+  background-color: #271605  !important;
+  color: #c5895b  !important;
 }
 
 @media (max-width: 650px) {
