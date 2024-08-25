@@ -12,6 +12,58 @@ export default function Body({ handleScrollToHeader }) {
   const [message, setMessage] = useState('');
   const chatEndRef = useRef(null); // Ref to track the end of the chat
 
+  const parseMarkdown = (text) => {
+    // Replace headers (e.g., # Header) with <h1> tags
+    const headerPattern = /^(#+)\s+(.*)$/gm;
+    text = text.replace(headerPattern, (match, p1, p2) => {
+      const level = p1.length; // Number of # determines header level
+      return `<h${level}>${p2}</h${level}>`;
+    });
+  
+    // Replace bold text (e.g., **bold**) with <strong> tags
+    const boldPattern = /\*\*(.*?)\*\*/g;
+    text = text.replace(boldPattern, '<strong>$1</strong>');
+  
+    // Replace italic text (e.g., *italic*) with <em> tags
+    const italicPattern = /\*(.*?)\*/g;
+    text = text.replace(italicPattern, '<em>$1</em>');
+  
+    // Process unordered lists (e.g., - item)
+    const unorderedListPattern = /^-\s+(.*)$/gm;
+    text = text.replace(unorderedListPattern, (match, p1, offset, string) => {
+      if (!string.substring(0, offset).includes('<ul>')) {
+        return `<ul><li>${p1}</li>`;
+      }
+      return `<li>${p1}</li>`;
+    });
+  
+    // Close unordered list if it was open
+    text = text.replace(/<\/li>(?!<\/ul>)/g, '</li></ul>');
+  
+    // Process ordered lists (e.g., 1. item) and remove the numbers
+    const orderedListPattern = /^(\d+)\.\s+(.*)$/gm;
+    text = text.replace(orderedListPattern, (match, p1, p2) => {
+      if (!text.includes('<ol>')) {
+        return `<ol><li>${p2}</li>`;
+      }
+      return `<li>${p2}</li>`;
+    });
+  
+    // Close ordered list if it was open
+    text = text.replace(/<\/li>(?!<\/ol>)/g, '</li></ol>');
+  
+    // Replace new lines with <br> for better formatting
+    text = text.replace(/\n/g, '<br>');
+  
+    // Remove numbering from ordered lists
+    text = text.replace(/<ol>.*?<li>(.*?)<\/li>/g, '<ul><li>$1</li></ul>');
+  
+    return text;
+  };
+  
+  
+  
+
   const sendMessage = async () => {
     setMessage('');
     setMessages((messages) => [
@@ -91,7 +143,8 @@ export default function Body({ handleScrollToHeader }) {
               justifyContent={message.role === 'assistant' ? 'flex-start' : 'flex-end'}
             >
               <Box className={message.role === 'assistant' ? styles.assistantMessage : styles.userMessage}>
-                {message.content}
+                {/* {message.content} */}
+                <div dangerouslySetInnerHTML={{ __html: parseMarkdown(message.content) }} />
               </Box>
             </Box>
           ))}
