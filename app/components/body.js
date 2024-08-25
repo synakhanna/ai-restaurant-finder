@@ -6,7 +6,7 @@ export default function Body({ handleScrollToHeader }) {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: `Welcome to CraveQuest. How can I help with your food cravings today?`,
+      content: `Welcome to CraveQuest!How can I help with your food cravings today?What type of food/restaurant are you looking for?😋`,
     },
   ]);
   const [message, setMessage] = useState('');
@@ -61,9 +61,6 @@ export default function Body({ handleScrollToHeader }) {
     return text;
   };
   
-  
-  
-
   const sendMessage = async () => {
     setMessage('');
     setMessages((messages) => [
@@ -103,7 +100,7 @@ export default function Body({ handleScrollToHeader }) {
 
   const initialMessage = {
     role: 'assistant',
-    content: `Welcome to CraveQuest. How can I help with your food cravings today?`,
+    content: `Welcome to CraveQuest!How can I help with your food cravings today?What type of food/restaurant are you looking for?😋`,
   };
   
   const resetChat = () => {
@@ -114,19 +111,6 @@ export default function Body({ handleScrollToHeader }) {
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-  
-    window.addEventListener('resize', handleResize);
-  
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     <Box className={styles.body}>
@@ -152,16 +136,16 @@ export default function Body({ handleScrollToHeader }) {
         </Stack>
         <Stack direction={'row'} spacing={2}>
           <TextField
-            label={windowWidth <= 810 ? "Type here..." : "What type of food/restaurant are you looking for?Type here..."}
+            label="Type here..."
             fullWidth
             variant="outlined"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             InputProps={{
-              style: { backgroundColor: '#c5895b', color: '#281705', fontFamily: 'JejuMyeongjo' },
+              style: { backgroundColor: '#cea986', color: '#1C0A01', fontFamily: 'JejuMyeongjo' },
             }}
             InputLabelProps={{
-              style: { color: '#27160582', fontFamily: 'JejuMyeongjo' },
+              style: { color: '#1C0A01', fontFamily: 'JejuMyeongjo' },
             }}
             onKeyPress={(e) => {
               if (e.key === 'Enter') {
