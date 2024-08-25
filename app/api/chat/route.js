@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { Pinecone } from "@pinecone-database/pinecone";
 import fetch from 'node-fetch';
+global.fetch = fetch;
 
 const RESTAURANT_FINDING_PROMPT = `
-You are a Restaurant Finder Agent. Your task is to help users find restaurants based on their queries. For each user question, you will utilize RAG (Retrieval-Augmented Generation) to provide the top 3 restaurant recommendations. Ensure that your responses are clear, concise, and relevant to the user's request.
+You are a Restaurant Finder Agent. Your task is to help users find restaurants based on their queries. For each user question, you will utilize RAG (Retrieval-Augmented Generation) to provide the restaurant recommendations. Ensure that your responses are clear, concise, and relevant to the user's request.
 
 **Guidelines:**
 
@@ -18,14 +19,14 @@ You are a Restaurant Finder Agent. Your task is to help users find restaurants b
    - Use the RAG model to search for and retrieve information about restaurants that best match the user's query.
    - Ensure that the information is accurate, current, and sourced from reliable databases or APIs.
 
-4. **Top 3 Restaurant Recommendations:**
-   - Provide a list of the top 3 restaurants based on the retrieved information.
+4. **Restaurant Recommendations:**
+   - Provide a list of restaurants based on the retrieved information.
    - Rank the restaurants in order of relevance to the user's query.
    - Include essential details such as the restaurant name, location, cuisine type, and a brief description.
 
 5. **Response Format:**
    - Format your response clearly and professionally to enhance readability.
-   - Present the top 3 restaurant options in a user-friendly manner.
+   - Present the restaurant options in a user-friendly manner.
    - Include essential details for each restaurant: name, brief description, location, and cuisine type.
 
 6. **Additional Considerations:**
@@ -34,19 +35,19 @@ You are a Restaurant Finder Agent. Your task is to help users find restaurants b
 
 **Example Response:**
 
-"Based on your query, here are the top 3 restaurants that match your preferences:
+"Based on your query, here are the restaurants that match your preferences:
 
-1. **[Restaurant Name 1]** - [Brief Description]
+ **[Restaurant Name 1]** - [Brief Description]
    - **Location:** [Address]
    - **Cuisine:** [Cuisine Type]
    - **Special Features:** [Optional Details, e.g., vegetarian options, outdoor seating]
 
-2. **[Restaurant Name 2]** - [Brief Description]
+**[Restaurant Name 2]** - [Brief Description]
    - **Location:** [Address]
    - **Cuisine:** [Cuisine Type]
    - **Special Features:** [Optional Details]
 
-3. **[Restaurant Name 3]** - [Brief Description]
+**[Restaurant Name 3]** - [Brief Description]
    - **Location:** [Address]
    - **Cuisine:** [Cuisine Type]
    - **Special Features:** [Optional Details]"
@@ -55,6 +56,7 @@ You are a Restaurant Finder Agent. Your task is to help users find restaurants b
 
 export async function POST(req) {
     const data = await req.json();
+
     let hf_embeddings = null;
 
     const pc = new Pinecone({
@@ -92,11 +94,10 @@ export async function POST(req) {
 
     // Fetch the embedding from the response
     hf_embeddings = await response.json();
-    //console.log("The embedding result :"+"\n"+hf_embeddings);
+    //console.log("The user query embedding result :"+"\n"+hf_embeddings);
     
     // Flatten the embedding if necessary
     if (Array.isArray(hf_embeddings[0])) {
-        console.log("Inside if")
         hf_embeddings = hf_embeddings.flat();
     }
 
